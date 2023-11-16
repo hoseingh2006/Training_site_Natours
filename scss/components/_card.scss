@@ -1,0 +1,200 @@
+.card {
+    position: relative;
+
+    perspective: 150rem;
+    height: 59rem;
+
+    @include respond(900px) {
+        // clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        perspective: 0;
+        margin:0 0 30rem 0;
+
+    }
+
+
+    &-tours {
+        width: 100%;
+        background-color: $with;
+        height: 59rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+        transition: all .8s ease;
+        border-radius: 3px;
+        overflow: hidden;
+
+        @include respond(900px) {
+            clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+        }
+    }
+
+    &-front {
+
+        background-color: $with;
+
+        @include respond(900px) {
+            position: relative;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+
+    }
+
+    &-back {
+
+        transform: rotateY(180deg);
+
+        @include respond(900px) {
+            transform: rotateY(0);
+            position: absolute;
+            top: 80%;
+            left: 0;
+            height: 35rem;
+            z-index: -1;
+
+        }
+
+        &-1 {
+            background-image: linear-gradient(to right bottom,
+                    $color-secondary-light,
+                    $color-secondary-dark)
+        }
+
+        &-2 {
+            background-image: linear-gradient(to right bottom,
+                    $Light-green,
+                    $Dark-green)
+        }
+
+        &-3 {
+            background-image: linear-gradient(to right bottom,
+                    $color-tertiary-light,
+                    $color-tertiary-dark)
+        }
+
+
+    }
+
+    &:hover &-front {
+        transform: rotateY(-180deg);
+
+        @include respond(900px) {
+            transform: rotateY(0);
+        }
+    }
+
+    &:hover &-back {
+        transform: rotateY(0deg);
+    }
+
+    &-picture {
+        background-size: cover;
+        height: 23rem;
+        background-blend-mode: screen;
+        clip-path: polygon(100% 0, 100% 85%, 0 100%, 0 0);
+
+        &-1 {
+            background-image: url("../img/nat-5.jpg"), linear-gradient(to right,
+                    rgba($color-secondary-light, 0.8),
+                    rgba($color-secondary-dark, 0.8));
+        }
+
+        &-2 {
+            background-image: url("../img/nat-6.jpg"), linear-gradient(to right,
+                    rgba($Light-green, 0.8),
+                    rgba($Dark-green, 0.8));
+        }
+
+        &-3 {
+            background-image: url("../img/nat-7.jpg"), linear-gradient(to right,
+                    rgba($color-tertiary-light, 0.8),
+                    rgba($color-tertiary-dark, 0.8));
+        }
+    }
+
+    &-heading {
+        color: $with;
+        font-size: $big-font-size;
+        font-weight: 300;
+        text-transform: uppercase;
+        width: 75%;
+        position: absolute;
+        top: 8rem;
+        left: 15rem
+    }
+
+    &-heading-span {
+        padding: 1.5rem 2rem;
+        line-height: 5rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+
+        &-1 {
+            background-image: linear-gradient(to right bottom,
+                    rgba($color-secondary-light, 0.85),
+                    rgba($color-secondary-dark, 0.85));
+        }
+
+        &-2 {
+            background-image: linear-gradient(to right bottom,
+                    rgba($Light-green, 0.85),
+                    rgba($Dark-green, 0.85));
+        }
+
+        &-3 {
+            background-image: linear-gradient(to right bottom,
+                    rgba($color-tertiary-light, 0.85),
+                    rgba($color-tertiary-dark, 0.85));
+        }
+    }
+
+    &-details {
+        width: 70%;
+        margin: 0 auto;
+
+        &-list {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+
+            &-li {
+                font-size: $default-font;
+                margin-top: 0.5rem;
+                padding: 1.5rem;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid $light-gray2;
+                }
+            }
+        }
+
+    }
+
+    &-price-box {
+        text-align: center;
+        margin-top: 6rem;
+        color: $with;
+    }
+
+    &-price-only {
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        font-weight: 600;
+
+        @include respond(900px) {
+            margin-top: 10rem;
+        }
+    }
+
+    &-price-value {
+        font-size: 7rem;
+        font-weight: 100;
+        margin-bottom: 13rem;
+
+        @include respond(900px) {
+
+            margin: 0 0 3rem 0 !important;
+        }
+    }
+
+}

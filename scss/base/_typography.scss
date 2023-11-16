@@ -1,0 +1,109 @@
+.box-name {
+  color: $with;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  &-main {
+    text-transform: uppercase;
+    letter-spacing: 28px;
+    font-weight: 400;
+    font-size: 5.5rem;
+    display: block;
+    animation: MoveInLeft 1s ease-out;
+    @include respond(900px){
+      letter-spacing: 15px;
+    }
+    @include respond(400px){
+      letter-spacing: 12px;
+    }
+    @include respond(300px){
+      letter-spacing: 10px;
+      font-size: 5.3rem;
+    }
+    // @include respond(phone){
+    //   letter-spacing: 11px;
+    // }
+  }
+
+  &-sub {
+    text-transform: uppercase;
+    margin-top: 1.4rem;
+    letter-spacing: 14.5px;
+    font-weight: $default-font-weight;
+    font-size: 1.8rem;
+    display: block;
+    animation: MoveInRight 1s ease-out;
+    margin-bottom: 4rem;
+    @include respond(900px){
+      letter-spacing: 9px;
+    }
+    @include respond(400px){
+      letter-spacing: 7px;
+    }
+    @include respond(400px){
+      letter-spacing: 5px;
+      font-size: 1.6rem;
+    }
+  //   @include respond(phone){
+  //     letter-spacing: 6px;
+  //   }
+   }
+  
+}
+
+.heading-secondry {
+  font-size: 3.4rem;
+  font-weight: $default-font-weight;
+  display: inline-block;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right,$Light-green , $Dark-green);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all .2s;
+  @include respond(900px){
+    font-size: 3rem;
+    margin: 0;
+    margin-top: 6rem;
+  }
+  @include respond(750px){
+    font-size: 2.4rem;
+    margin: 0;
+    margin-top: 6rem;
+  }
+  @include respond(600px){
+    margin-top: 10rem;
+  }
+  @include respond(300px){
+    font-size: 2rem;
+    margin-top: 10rem;
+  }
+
+  &:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: .5rem 1rem 2rem rgba(#000000, 0.4);
+  }
+}
+
+
+
+.heading-tertiary{
+  font-size: $default-font;
+  font-weight: $default-font-weight;
+  text-transform: uppercase;
+  @include respond(600px){
+    font-size: 1.4rem;
+  }
+}
+.paragraph{
+  font-size: $default-font;
+  line-height: 1.7;
+
+  font-weight:$mediom-font-weight;
+  @include respond(600px){
+    font-size: 1.4rem;
+  }
+}

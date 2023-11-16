@@ -1,0 +1,3 @@
+@mixin respond($brekpoint){ 
+    @media(max-width:$brekpoint){@content};
+}

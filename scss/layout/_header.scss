@@ -1,0 +1,29 @@
+.hedear {
+  background-image: linear-gradient(to right,
+      rgba($Light-green, 0.8),
+      rgba($Dark-green, 0.8)),
+    url("../img/hero-small.jpg");
+  background-size: cover;
+  background-position: top;
+  height: 95vh;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+
+  @include respond(900px) {
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
+  @include respond(700px) {
+    clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
+  }
+  &-logo-withe {
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    height: 3rem;
+
+    @include respond(900px) {
+      top: 4%;
+      left: 4%;
+    }
+  }
+}

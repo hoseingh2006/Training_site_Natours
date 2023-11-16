@@ -1,0 +1,117 @@
+.footer {
+    background-color: $light-dark2;
+    @include respond(1000px) {
+        padding: 0 0 4rem 0;
+    }
+    
+
+    &-box {
+        height: 40rem;
+        padding-top: 8rem;
+
+        @include respond(1000px) {
+            padding-top: 4rem;
+        }
+        @include respond(450px) {
+            height: auto;
+        }
+
+        &-sub {
+            text-align: unset !important;
+            margin-right: 0 !important;
+            margin-left: 6rem;
+            @include respond(700px) {
+                margin-left: 0;
+            }
+            @include respond(450px) {
+                padding: 10px !important;
+            }
+
+
+        }
+
+        @include respond(1000px) {
+            text-align: center;
+        }
+
+        &2 {
+            position: absolute;
+
+            @include respond(1000px) {
+                position: unset;
+            }
+        }
+    }
+
+    &-img-box {
+        padding-top: 8rem;
+        text-align: center;
+
+    }
+
+    &-img {
+        width: 15rem;
+
+    }
+
+    &-list {
+        list-style: none;
+        padding: 2rem 0 0 0;
+        border-top: 2px solid $light-gray;
+        display: inline-block;
+
+
+        &-item {
+            display: inline-block;
+
+                margin-top: 2rem;
+
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+
+            &-link {
+                display: inline-block;
+                font-size: 1.4rem;
+                text-decoration: none;
+                color: $with;
+                text-transform: uppercase;
+
+                &:hover {
+                    color: $Medium-green;
+                    transform: skewY(-4deg) scale(1.2);
+                    background-color: $light-dark2;
+                    box-shadow: 0 1rem 2rem rgba($color-black, .5);
+
+                }
+
+            }
+        }
+    }
+
+    &-box-text {
+        text-align: left;
+        padding: 2rem 0 0 0;
+        border-top: 2px solid $light-gray;
+        width: 75%;
+
+        @include respond(1000px) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+
+    &-text {
+        margin: 0 auto;
+
+        font-size: 1.3rem;
+        color: $with;
+        line-height: 2;
+
+        & span {
+            font-size: $default-font;
+        }
+    }
+
+}

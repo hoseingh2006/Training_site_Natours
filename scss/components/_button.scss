@@ -1,0 +1,119 @@
+.btn {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: $default-font;
+  font-weight: 700;
+  padding: 15px 30px;
+  display: inline-block;
+  border-radius: 30px;
+  letter-spacing: 1px;
+  position: relative;
+  border: none;
+
+
+
+
+  &-withe {
+    background-color: $with;
+    color: #555;
+    transition: all 0.4s;
+  }
+
+  &-withe:hover {
+    box-shadow: 5px 7px 20px rgba(0, 0, 0, 0.5);
+    transform: translateY(-3px);
+  }
+
+  &-withe:active,
+  &-withe:visited {
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    transform: translateY(-1px);
+  }
+
+
+
+  &-green {
+    background-color: $Medium-green;
+    color: $with;
+    transition: all 0.4s;
+  }
+
+  &-green:hover {
+
+    box-shadow: 5px 7px 20px rgba(0, 0, 0, 0.5);
+    transform: translateY(-3px);
+  }
+
+  &-green:active,
+  &-green:visited {
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    transform: translateY(-1px);
+  }
+
+
+
+
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+
+    border-radius: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  &-withe::after {
+    background-color: $with;
+  }
+
+  &-green::after {
+    background-color: $Medium-green;
+  }
+
+  &:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+  }
+
+  &-animation {
+    animation: MoveInBottom 0.5s ease-out 0.75;
+    animation-fill-mode: backwards;
+  }
+}
+
+.btn-text {
+
+  &:link,
+  &:visited {
+    color: $Medium-green;
+    display: inline-block;
+    border-bottom: 1px solid $Medium-green;
+    text-decoration: none;
+    padding: 3px;
+    font-size: $default-font;
+    text-align: left;
+    transition: all .2s;
+    padding: 1rem 2rem;
+  }
+
+  &:hover {
+    background-color: $Medium-green;
+    color: $with;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    transform: translateY(-2px);
+    border-radius: 2rem;
+
+  }
+
+  &:active {
+    box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
+    transform: translateY(0);
+  }
+
+}

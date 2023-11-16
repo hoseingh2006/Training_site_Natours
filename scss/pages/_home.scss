@@ -1,0 +1,93 @@
+.section-about {
+    padding: 20rem 0;
+    margin-top: -25vh;
+    background-color: $light-dark;
+
+    @include respond(900px) {
+        padding: 20rem 3rem;
+    }
+    
+    @include respond(400px) {
+        padding: 20rem 1.5rem;
+    }
+    @include respond(300px) {
+        padding: 20rem 0;
+    }
+}
+
+.section-features {
+    padding: 17rem 0;
+    background-image: linear-gradient(to right,
+            rgba($Light-green, 0.8),
+            rgba($Dark-green, 0.8)),
+        url("../../img/nat-4.jpg");
+    background-size: cover;
+    transform: skewY(-7deg);
+    margin-top: -10rem;
+
+    &>* {
+        transform: skewY(7deg);
+    }
+
+    @include respond(900px) {
+        padding: 7rem 3rem;
+    }
+    @include respond(400px) {
+        padding: 7rem 1.5rem;
+    }
+    @include respond(300px) {
+        padding: 7rem 0;
+    }
+}
+
+.section-tours {
+    padding: 14rem 0;
+    margin-top: -25vh;
+    background-color: $light-dark;
+
+    @include respond(900px) {
+        padding: 14rem 3rem;
+    }
+
+    @include respond(700px) {
+        padding: 8rem 0;
+        margin-top: -21vh;
+    }
+}
+
+.section-story {
+    padding: 20rem 0;
+    position: relative;
+    z-index: 1;
+
+    @include respond(900px) {
+        padding: 10rem 3rem;
+    }
+
+    @include respond(700px) {
+        padding: 5rem 3rem;
+    }
+    @include respond(400px) {
+        padding: 5rem 1.5rem;
+    }
+    @include respond(300px) {
+        padding: 5rem 0;
+    }
+}
+
+.section-book {
+    @include respond(900px) {
+        padding: 20rem 3rem;
+    }
+    @include respond(500px) {
+        padding: 10rem 3rem;
+    }
+    @include respond(300px) {
+        padding: 10rem 0;
+    }
+    padding: 20rem 0;
+    background-image: linear-gradient(to right,
+            rgba($Light-green, 0.8),
+            rgba($Dark-green, 0.8))
+}
+

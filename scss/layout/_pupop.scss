@@ -1,0 +1,152 @@
+.pupop {
+    position: fixed;
+    height: 105vh;
+    width: 105vw;
+    background-color: rgba($color-black, 0.9);
+    top: 0;
+    left: 0;
+    z-index: 4000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s .2s;
+
+    @include respond(1000px) {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    &-box {
+
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(.25);
+        width: 75%;
+        height: 50rem;
+        background-color: $with;
+        overflow: hidden;
+        border-radius: 4px;
+        transition: all .4s .2s;
+
+        @include respond(1200px) {
+            width: 80%;
+            height: auto;
+        }
+
+        @include respond(1100px) {
+            width: 90%;
+        }
+
+        @include respond(950px) {
+            width: 95%;
+
+        }
+
+
+    }
+
+    &-img {
+        width: 100%;
+        display: block;
+        @include respond(800px) {
+            display: inline-block;
+            width: 49%;
+            height: 25rem;
+
+        }
+        @include respond(450px) {
+            display: inline-block;
+            width: 49%;
+            height: 20rem;
+
+        }
+        @include respond(400px) {
+            display: inline-block;
+            width: 49%;
+            height: 17rem;
+
+        }
+        @include respond(300px) {
+            display: inline-block;
+            width: 49%;
+            height: 16rem;
+
+        }
+    }
+
+    &-imge-box {
+        width: 36.5%;
+        display: table-cell;
+
+
+        @include respond(1400px) {
+            width: 40%;
+        }
+
+        @include respond(800px) {
+            display: inline-block;
+            width: 102%;
+
+        }
+
+    }
+
+    &-text-box {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 3rem 5rem;
+        width: 66.666667%;
+        display: table-cell;
+
+        @include respond(1300px) {
+            padding: 2rem 2rem;
+        }
+        @include respond(800px) {
+            text-align: center;
+        }
+
+
+    }
+
+    &-text {
+        font-size: 1.4rem;
+        column-count: 2;
+        column-gap: 6rem;
+        column-rule: 1px solid $light-gray;
+        line-height: 1.5;
+
+        @include respond(1000px) {
+            column-gap: 2rem;
+        }
+
+        @include respond(900px) {
+            column-count: 1;
+            column-gap: 0;
+        }
+    }
+
+    &-close {
+        font-size: 3rem;
+        cursor: pointer;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        text-decoration: none;
+        color: $color-black;
+
+        &:hover {
+            color: $Medium-green;
+        }
+    }
+
+    &:target {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &:target &-box {
+        transform: translate(-50%, -50%) scale(1);
+        ;
+    }
+}

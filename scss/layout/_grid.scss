@@ -1,0 +1,74 @@
+.line{
+    max-width: $gutter-main;
+    margin: 0 auto;
+    text-align: center;
+    &-one{
+        width:calc((99% - #{$space} ) / 2);
+        @include respond(900px){
+            width:75%;
+          }
+          @include respond(600px){
+            width:90%;
+          }
+    }
+    
+    &-two{
+        width:calc((99% - ( #{$space} * 2) ) / 3);
+        @include respond(1200px){
+            width:50%;
+          }
+          @include respond(900px){
+            width:80%;
+          }
+          @include respond(500px){
+            width:100%;
+          }
+    }
+
+    &-two-one{
+        width:calc(((99% - ( #{$space} * 2) ) / 3) * 2 );
+    }
+    &-fore{
+        width:calc((99% - ( #{$space} * 3) ) / 4);
+        @include respond(900px){
+            width:48%;
+          }
+          @include respond(650px){
+            width:80%;
+          }
+          @include respond(500px){
+            width:100%;
+          }
+    }
+}
+.inline{
+    display: inline-block;
+    padding: 25px 0;
+    text-align: center;
+    text-align: left;
+
+    &:not(:last-child){
+        margin-right:$space;
+
+        @include respond(900px){
+            margin-right: 0;
+          }
+
+    }
+
+        
+
+
+    
+    @include respond(900px){
+        padding: 25px 25px;
+      }
+    }
+    
+
+.grid-even{
+    @include respond(900px){
+        margin-right: 25px;
+      }
+}
+

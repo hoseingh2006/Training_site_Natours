@@ -1,0 +1,112 @@
+.form {
+    @include respond(1050px){
+        margin-top:2rem;
+       
+      }
+    &-group:not(:last-child) {
+        margin-bottom: 2rem;
+
+    }
+
+ 
+
+    &-input {
+        width: 90%;
+        padding: 1.5rem 3rem;
+        font-size: $default-font;
+        font-family: inherit;
+        border: none;
+        border-bottom: 5px solid transparent ;
+        border-radius: 3px;
+        transition: all 0.3s;
+
+        &:focus {
+            outline: none;
+            border-bottom: 5px solid orangered;
+            box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+        }
+    
+        &::placeholder {
+            color: #999;
+            font-family: inherit;
+        }
+    
+        &:valid:focus {
+            border-bottom: 5px solid $Medium-green;
+        }
+        
+
+
+    }
+
+
+    &-input:placeholder-shown+&-lable {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+    
+
+    &-lable {
+        font-size: $default-font;
+        margin-left: 3rem;
+        margin-top: 1rem;
+        display: block;
+        transition: all 0.3s ease-out;
+    }
+
+    &-group-radio {
+        display: inline-block;
+        width: 49%;
+    }
+
+}
+
+.input-radio {
+    display: none;
+    &-lable {
+        font-size: $default-font;
+        position: relative;
+        cursor: pointer;
+
+        display: inline-block;
+
+        &-text {
+            width: 3rem;
+            height: 3rem;
+            border: 5px solid $Medium-green;
+            border-radius: 50%;
+            display: inline-block;
+            position: absolute;
+            top: -4px;
+            left: -43px;
+            @include respond(400px){
+                left: -25px;
+               
+              }
+
+            &::after {
+                display: inline-block;
+                border-radius: 100%;
+                content: "";
+                width: 1.5rem;
+                height: 1.5rem;
+                background-color:$Medium-green ;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                opacity: 0;
+                transition: opacity 0.2s;
+
+            }
+        }
+
+    }
+    &:checked+&-lable &-lable-text::after{
+        opacity: 1;
+
+    }
+
+   
+}
